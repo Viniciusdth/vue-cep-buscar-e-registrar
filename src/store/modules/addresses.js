@@ -56,7 +56,7 @@ const mutations = {
       createdAt: format(new Date(address.createdAt), "dd/MM/yyyy", {
         locale: ptBR,
       }),
-      updatedAt: format(new Date(address.updatedAt), "dd/MM/yyyy", {
+      updatedAt: format(new Date(address.updatedAt), "dd/MM/yyyy HH:mm", {
         locale: ptBR,
       }),
     }));
@@ -67,7 +67,7 @@ const mutations = {
       createdAt: format(new Date(address.createdAt), "dd/MM/yyyy", {
         locale: ptBR,
       }),
-      updatedAt: format(new Date(address.updatedAt), "dd/MM/yyyy", {
+      updatedAt: format(new Date(address.updatedAt), "dd/MM/yyyy HH:mm", {
         locale: ptBR,
       }),
     });
@@ -81,9 +81,13 @@ const mutations = {
       state.addresses.splice(index, 1, {
         ...state.addresses[index],
         ...updatedAddress,
-        updatedAt: format(new Date(updatedAddress.updatedAt), "dd/MM/yyyy", {
-          locale: ptBR,
-        }),
+        updatedAt: format(
+          new Date(updatedAddress.updatedAt),
+          "dd/MM/yyyy HH:mm",
+          {
+            locale: ptBR,
+          }
+        ),
       });
     }
   },
