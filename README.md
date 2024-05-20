@@ -31,7 +31,7 @@ src/main.js: Arquivo de entrada principal.
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd seu-repositorio
+   cd vue-cep-buscar-e-registrar
 
 
 3. Instale as dependências:
